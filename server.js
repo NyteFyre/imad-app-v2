@@ -21,37 +21,41 @@ var articleOne={
             This is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is first
         </p>`
 };
-
+function createTemplate(data)
+{
+    var title=data.title;
+    var content=data.content;
 var htmlTemplate=`
-    <html>
-    <head>
-        <title>${title}</title>
-    <meta name="viewport" content="device-width, initial-scale=1"/>
-    </head>
-    <body>
-        <a href="/">home</a>
-        <p>
-            ${content}
-        </p>
-        <p>
-            ${content}
-        </p>
-        <p>
-            ${content}
-        </p>
-        <p>
-            ${content}
-        </p>
-    </body>
-</html>
-`;
+            <html>
+            <head>
+                <title>${title}</title>
+            <meta name="viewport" content="device-width, initial-scale=1"/>
+            </head>
+            <body>
+                <a href="/">home</a>
+                <p>
+                    ${content}
+                </p>
+                <p>
+                    ${content}
+                </p>
+                <p>
+                    ${content}
+                </p>
+                <p>
+                    ${content}
+                </p>
+            </body>
+        </html>`;
+return htmlTemplate
+}
     
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
 app.get('/article-one', function (req, res) {
-    res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
+    res.send(createTemplate(articleleOne));
 });
 
 app.get('/article-two', function (req, res) {
