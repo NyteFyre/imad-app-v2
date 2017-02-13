@@ -5,6 +5,47 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+var articleOne={
+    title:'mad',
+    content:`
+    <p>
+            This is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is first
+        </p>
+        <p>
+            This is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is first
+        </p>
+        <p>
+            This is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is first
+        </p>
+        <p>
+            This is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is first
+        </p>`
+};
+
+var htmlTemplate=`
+    <html>
+    <head>
+        <title>${title}</title>
+    <meta name="viewport" content="device-width, initial-scale=1"/>
+    </head>
+    <body>
+        <a href="/">home</a>
+        <p>
+            ${content}
+        </p>
+        <p>
+            ${content}
+        </p>
+        <p>
+            ${content}
+        </p>
+        <p>
+            ${content}
+        </p>
+    </body>
+</html>
+`;
+    
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
