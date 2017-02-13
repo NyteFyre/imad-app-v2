@@ -36,15 +36,6 @@ var htmlTemplate=`
                 <p>
                     ${content}
                 </p>
-                <p>
-                    ${content}
-                </p>
-                <p>
-                    ${content}
-                </p>
-                <p>
-                    ${content}
-                </p>
             </body>
         </html>`;
 return htmlTemplate;
