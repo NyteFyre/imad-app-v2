@@ -5,10 +5,11 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var articleOne={
+var articles={
+    articleOne: {
     title:'mad',
     content:`
-    <p>
+        <p>
             This is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is first
         </p>
         <p>
@@ -20,7 +21,37 @@ var articleOne={
         <p>
             This is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is first
         </p>`
-};
+},
+    articleTwo:{
+    title:'mad',
+    content:`
+        <p>
+            This is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is first
+        </p>
+        <p>
+            This is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is first
+        </p>
+        <p>
+            This is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is first
+        </p>
+        <p>
+            This is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is first
+        </p>`},
+    articleThree:{
+            title:'mad',
+            content:`
+        <p>
+            This is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is first
+        </p>
+        <p>
+            This is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is first
+        </p>
+        <p>
+            This is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is first
+        </p>
+        <p>
+            This is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is firstThis is first
+        </p>`}};
 function createTemplate(data)
 {
     var title=data.title;
